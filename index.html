@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Feng's Personal Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+    <!--intro-->
+    <header>
+        <nav>
+            <a href="#content-wrap">About</a>
+            <a href="#work-experience">Work Experience</a>
+            <a href="#project-experience">Project Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div id="content-wrap" class="content-wrap">
+            <img class="profile-image" src="./assets/profile photo.jpg" alt="profile-image"/>
+            <div class="col-wide">
+                <h1>Justin Feng</h1>
+                <h2>Data Scientest / Front End Developer</h2>
+                <p></p>
+            </div>
+            <a href="./assests/Justin_Feng_resume.pdf" download class="btn download" target="_blank">Download PDF</a>
+        </div>
+    </header>
+</body>
+<main>
+    <!--work experience-->
+    <section id="work-experience" class="work-experience">
+        <div class="work-wrapper">
+            <h2>Work Experience</h2>
+            <!--job 1-->
+            <div class="job-wrapper">
+                <div>
+                    <h3>Data Scientist</h3>
+                    <p>PennyMac Loan Services, LLC</p>
+                    <p>2021 - 2022</p>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Built machine learning models on 4M+ rows of data to identify high value customers for potential purchase business, achieved 80% improvement in marketing efficiency, and provided guidance on marketing channel resource allocation</li>
+                        <li>Improved existing model performance by 30% through engineering 300+ features, exploring advanced methodologies (LightGBM, imbalanced classification), and utilizing AWS cloud-based applications (SageMaker, EC2, S3)</li>
+                        <li>Tracked model performance, identified influential features using Shapley plot and presented analysis to non-technical audience for better understanding of customer behavior and the relationships with different marketing strategies</li>
+                        <li>Explored third-party datasets with 6M+ records and 1.3K+ features, designed and launched related projects, measured incremental lift with the new data on current model and translated into potential revenue to drive business decisions</li>
+                    </ul>
+                    <p><strong>Key Technologies: </strong>Python, AWS, SQL, Machine Learning, Data Visualization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--project experience-->
+    <section id="project-experience" class="project-experience">
+        <div class="project-wrapper">
+            <h2>Project Experience</h2>
+            <!--project 1-->
+            <div class="project-name-wrapper">
+                <div>
+                    <h3>Web-Based Projects</h3>
+                </div>
+                <div id="web-based-project" class="project-description">
+                    <!-- webpage project 1 -->
+                    <div id="project1">
+                        <img class='project-preview1' src="./assets/calculator_project_preview.jpg" />
+                        <a target="_blank" href="https://justin-feng.github.io/calculator/"><div class="demoprompt">See Demo</div></a>
+                        <p><strong>Key Technologies: <br/></strong>HTML, CSS, JavaScript</p>
+                    </div>
+                    <!-- webpage project 2 -->
+                    <div id="project2">
+                        <img class='project-preview1' src="./assets/todo-list-react_project_preview.jpg" />
+                        <a target="_blank" href="https://justin-feng.github.io/todo-list-react/"><div class="demoprompt">See Demo</div></a>
+                        <p><strong>Key Technologies: <br/></strong>ReactJs, HTML, CSS, JavaScript</p>
+                    </div>
+                </div>
+                <script>
+                    let acc = document.getElementsByClassName("demoprompt");
+                    let i;
+                    for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("mouseenter", function() {
+                            this.style.opacity = 0.9;
+                            });
+                        acc[i].addEventListener("mouseleave", function() {
+                            this.style.opacity = 0;
+                            });
+                    }
+                </script>
+            </div>
+            <!--project 2-->
+            <div class="project-name-wrapper">
+                <div>
+                    <h3>Time-Series Analysis Project, S&P 500 Index Volatility Prediction</h3>
+                    <p>2020</p>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Prepared descriptive data analysis on weekly volatility of the S&P 500 index; computed statistics of the time-series data and created data visuals indicating the characteristics of the time-series data over the past 25 years</li>
+                        <li>Predicted the volatility using techniques including Exponential Smoothing, ARIMA, and ADL model in R language; successfully captured the large fluctuation in 2008 and 2020 and estimated the volatility to a limited accuracy</li>
+                        <li>Achieved error about 8% off the data and improved 5% of the error after adding VIX index as an external factor</li>
+                    </ul>
+                    <p><strong>Key Technologies: </strong>...</p>
+                </div>
+            </div>
+            <!--project 3-->
+            <div class="project-name-wrapper">
+                <div>
+                    <h3>Algorithmic Trading Project, SSE50 Stocks Investment w/ Statistical Learning Models</h3>
+                    <p>2020</p>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Engineered features from raw data; built a portfolio consists of 9 stocks using open-source Python package PyPortfolioOpt and set up naïve buy-in, sell-out trading strategy based on the training period of the data</li>
+                        <li>Implemented statistical learning models (Boosted Tree, Random Forest, LSTM) to predict future stock return and performed algorithmic trading based on the proposed trading strategy</li>
+                        <li>Achieved a performance of 42% rate of return, which is about 40% more than a buy-and-hold trading strategy</li>
+                    </ul>
+                    <p><strong>Key Technologies: </strong>...</p>
+                </div>
+            </div>
+            <!--project 4-->
+            <div class="project-name-wrapper">
+                <div>
+                    <h3>Centro.io, Real Estate Pricing Strategy Data Analysis Project</h3>
+                    <p>2019</p>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Conducted data cleaning on 43K+ rows of sales and rental data from company managing assets in excess of $125M</li>
+                        <li>Performed exploratory data analysis on the data, built predictive regression models with respect to sales and rental price and output data visuals to identify key factors associated with generating exceptionally high or low price</li>
+                        <li>Presented insights to the manager of the company on refining pricing strategy and measuring values of the properties</li>
+                    </ul>
+                    <p><strong>Key Technologies: </strong>...</p>
+                </div>
+            </div>
+            <!--project 5-->
+            <div class="project-name-wrapper">
+                <div>
+                    <h3>Institute of Information Science, Academia Sinica</h3>
+                    <p><strong>Research Assistant - Sequential Group Recommendation System with Social Network Analysis</strong></p>
+                    <p>2017 - 2018</p>
+                </div>
+                <div class="project-description">
+                    <ul>
+                        <li>Innovated the framework of a recommender system that expands the target customers into groups and recommends items sequentially. Published paper accepted by and demoed at WWW The Web Conference 2018</li>
+                        <li>Built linear threshold model simulating the real-world social network and a greedy sequence selection algorithm to tackle the MPA-like (Maximum Probability Assignment) NP-hard problem for maximizing customer satisfaction</li>
+                        <li>Designed and conducted experiments with Python on user check-in dataset, Gowalla with 6.4M+ entries, to evaluate the effectiveness of recommender algorithm which outperformed the simple greedy algorithm by 50% on accuracy and reduced executing time by 90% comparing with the brute force optimal solution</li>
+                    </ul>
+                    <p><strong>Key Technologies: </strong>...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--education-->
+    <section id="education" class="education">
+        <div class="education-wrapper">
+            <h2>Education</h2>
+            <!--school 1-->
+            <h3>FreeCodeCamp</h3>
+            <p></p>
+            <ul>
+                <li>Responsive Web Design</li>
+                <li>JavaScript Algorithms and Data Structures</li>
+            </ul>
+            <!--school 2-->
+            <h3>University of Southern California, Marshall School of Business ––– Los Angeles, CA 2020</h3>
+            <p>Master of Science in Business Analytics (STEM), Dept. of Data Sciences and Operations</p>
+            <!--school 3-->
+            <h3>National Chiao Tung University ––– Hsinchu, Taiwan 2018</h3>
+            <p>Bachelor of Science in Electrical and Computer Engineering (ECE)</p>
+        </div>
+    </section>
+</main>
+<!--footer-->
+<footer id="contact">
+    <div class="contact-wrapper">
+        <h2>Let's keep in touch!</h2>
+        <div class="contact-buttons">
+            <a>email</a>
+            <a>linkedin</a>
+            <a>github</a>
+        </div>
+    </div>
+</footer>
+</html>

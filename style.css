@@ -1,0 +1,353 @@
+
+/* Colors
+#2B2D42 - dark blue
+#8D99AE - light blue
+#EDF2F4 - blue to white
+#EF233C - red
+Morendica xhslink.com/A5C72o
+#575740 - dark coffee
+#a58978 - light soil
+#b9b7a8 - very light dirt
+--
+#877c6d - dirt
+#b3a18a - light dirt
+#e4cbab - light "mi"
+--
+#23413e - mid "mo" green
+#9c513b - mid brown
+#edc9b3 - light "mi"
+--
+#909776 - old mocha
+#e9c079 - sand
+#ded2a2 - light "mi" green
+--
+#8b7b80 - "mo" purple
+#cd8476 - "mo" red
+#8fafb6 - "mo" blue
+--
+#4f6062 - dark "mo" blue
+#727d7f - dirt "mo" blue
+#a38983 - sand purple
+--
+#3c3636 - dark coffee
+#c6a88c - sand
+#6b6a56 - mid mocha
+--
+#1d1e22 - very dark coffee
+#485767 - "mo" blue
+#b8907b - mid sand
+*/
+
+
+/* ---------- Global styles ---------- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+}
+h1 {
+    font-size: 80px;
+}
+h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+h3 {
+    margin: 0;
+}
+
+
+/* --- Navigation --- */
+nav {
+    text-align: center;
+    position: fixed; /* Keep the element fixed at a position (top), even scrolling. */
+    width: 100%;
+    background-color: #c6a88c;
+    top: 0; /* Make sure it is at the top. */
+}
+
+nav a {
+    display: inline-block;
+    /*
+    inline: setting width/height not allowed; top and bottom maring not respected (will overlap to the upper and lower elements).
+    inline-block: allows to set a width and height on the element.
+    block: add a line-break after the element (takes up the whole line).
+    */
+    margin: 5px;
+    text-decoration: none; /* So that the linked text will not be blue nor having underscore. */
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #2B2D72;
+}
+@media (min-width: 440px) { /* When width > 440px */
+    nav a {
+        margin: 14px;
+        font-size: 16px;
+    }
+}
+
+
+/* --- Header --- */
+header {
+    position: relative;
+    /*
+    static: (default); positioned according to the normal flow; not affected by top, bottom, left, right.
+    relative: positioned relative to its normal position (normal flow + [top, left]).
+    fixed: positioned relative to the viewport, always stays in the same place even if the page is scrolled.
+    absolute: positioned relative to the nearest positioned ancestor.
+    sticky: positioned based on the user's scroll position. (when user scrolls making the element out of the set [top, bottom, left, right], the element will stay (stick)).
+    */
+    padding-top: 50px;
+    text-align: center;
+    background-color: #3c3636;
+    color: #8D99AE;
+}
+
+header h1, header h2 {
+    color: #DED2A2;
+}
+
+h1 {
+    margin: 0;
+}
+
+.content-wrap {
+    display: flex;
+    /* https://www.w3schools.com/cssref/pr_class_display.php */
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 60px 50px;
+    max-width: 950px;
+    overflow: hidden;
+}
+@media (min-width: 935px) {
+    .content-wrap {
+        flex-direction: row;
+    }
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+@media (min-width: 440px) {
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (min-width: 935px) {
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.col-wide {
+    margin: auto;
+}
+
+.btn {
+    text-decoration: none;
+    background: #9c513b;
+    color: white;
+    padding: 0 5px 0 5px;
+}
+@media (min-width: 440px) {
+    .btn {
+        padding: 10px;
+    }
+}
+
+.download {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* --- Work Experience --- */
+.work-experience {
+    padding-top: 40px;
+    background-color: #EDF2F4;
+}
+
+.work-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 950px;
+}
+
+.job-wrapper {
+    display: block;
+    padding-bottom: 30px;
+}
+@media (min-width: 935px) {
+    .job-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        column-gap: 30px;
+    }
+}
+
+h3~p { /* match all <p> elements follow a <h3> element under same parent, immediately or not */
+    margin: 5px 0;
+}
+
+@media (min-width: 935px) {
+    .job-description p:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.job-description ul {
+    padding: 0;
+}
+.job-description ul li {
+    margin-bottom: 10px;
+}
+
+
+/* --- Project Experience --- */
+.project-experience {
+    padding-top: 40px;
+    background-color: #e8e9eb;
+}
+
+.project-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 950px;
+}
+
+.project-name-wrapper {
+    display: block;
+    padding-bottom: 30px;
+}
+@media (min-width: 935px) {
+    .project-name-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        column-gap: 30px;
+    }
+}
+
+@media (min-width: 935px) {
+    .project-description p:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.project-description ul {
+    padding: 0;
+}
+.project-description ul li {
+    margin-bottom: 10px;
+}
+.project-description p {
+    margin-bottom: 40px;
+}
+
+#web-based-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: inherit;
+}
+.project-preview1 {
+    width: 300px;
+    height: 185px;
+}
+.demoprompt {
+    position: relative;
+    border-radius: 5px;
+    top: -190px;
+    margin-bottom: -180px;
+    height: 185px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: #cfc5c5b1;
+    overflow: hidden;
+    cursor: pointer;
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* --- Education --- */
+.education {
+    padding: 40px 0;
+    background: linear-gradient(rgba(141, 153, 174, 0.9), rgba(141, 153, 174, 0.7)), url(./assets/usc.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.education-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 950px;
+}
+
+ul {
+    margin-top: 0;
+}
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    background-color: #3c3636;
+    color: #8D99AE;
+}
+
+.contact-wrapper {
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: 900px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.media-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: #8D99AE solid 2px;
+}
+
+.media-pic:hover {
+    transform: scale(1.1);
+}
+
+p+h3 {
+    margin-top: 30px;
+}
+
+footer p {
+    margin-top: 50px;
+}
+
+
+
+
