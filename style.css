@@ -213,6 +213,9 @@ h3~p { /* match all <p> elements follow a <h3> element under same parent, immedi
 .job-description ul li {
     margin-bottom: 10px;
 }
+.keytechs {
+    font-family: 'Segoe UI';
+}
 
 
 /* --- Project Experience --- */
@@ -265,10 +268,14 @@ h3~p { /* match all <p> elements follow a <h3> element under same parent, immedi
     width: 300px;
     height: 185px;
 }
+.demoprompt-link {
+    position: relative;
+    top: -190px;
+    margin-bottom: -180px;
+}
 .demoprompt {
     position: relative;
     border-radius: 5px;
-    top: -190px;
     margin-bottom: -180px;
     height: 185px;
     font-size: 2rem;
@@ -284,6 +291,10 @@ h3~p { /* match all <p> elements follow a <h3> element under same parent, immedi
 }
 a {
     text-decoration: none;
+}
+
+.research-link {
+    text-decoration: underline;
 }
 
 
@@ -327,6 +338,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+.contact-buttons > a {
+    color: #8D99AE;
 }
 
 .media-pic {
